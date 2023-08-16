@@ -1,0 +1,109 @@
+/* Reset default margin, padding, and box-sizing for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Apply styles to the header */
+header {
+  /* Set the header as a flex container */
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  justify-content: center; /* Center children vertically */
+  align-items: center; /* Center children horizontally */
+  height: 100vh; /* Set header height to 100% of viewport height */
+  background-color: #EADBC8; /* Set background color */
+}
+/* Apply styles to the start button */
+/* This is a CSS rule for styling a button with the class 'start-button' */
+
+/* Set the display to inline-block so the button takes up only as much width as its content and allows other elements to be on the same line */
+.start-button {
+    display: inline-block;
+  
+    /* Add padding of 10px at the top and bottom, and 20px at the left and right to create space inside the button */
+    padding: 10px 20px;
+  
+    /* Add margin of 20px at the top to create space between this button and other elements above it */
+    margin-top: 20px;
+  
+    /* Set the background color of the button to #4682A9 */
+    background-color: #4682A9;
+  
+    /* Set the text color to white */
+    color: white;
+  
+    /* Remove text decoration (usually underlines) from the button text */
+    text-decoration: none;
+  
+    /* Add rounded corners to the button with a radius of 5px */
+    border-radius: 5px;
+  
+    /* Add a transition effect for the background color with a duration of 0.3 seconds and an ease-in-out timing function */
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  /* This is a CSS rule for when the mouse hovers over the button with the class 'start-button' */
+  .start-button:hover {
+    /* Change the background color to #749BC2 when the button is hovered over */
+    background-color: #749BC2;
+  }
+  
+  
+  
+  /* Apply background color to the body */
+  body {
+    background-color: #EADBC8;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Style the container for choices */
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60rem;
+  }
+  
+  /* Style the unordered list */
+  ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  /* Style the list items representing choices */
+  li {
+    margin: 0 80px;
+  }
+  
+  /* Apply colors to each choice */
+  #rockEl img {
+    width: 300px;
+    height: 300px;
+    background-color: #102C57;
+    padding: 5px;
+    border-radius: 50%;
+  }
+  
+  #paperEl img {
+    width: 300px;
+    height: 300px;
+    background-color: #0071e1;
+    padding: 5px;
+    border-radius: 50%;
+  }
+  
+  #scissorsEl img {
+    width: 300px;
+    height: 300px;
+    background-color: #4682A9;
+    padding: 5px;
+    border-radius: 50%;
+  }
+  
+  /* Apply color to the title */
+  h1 {
+    color: #526D82;
+  }
+  
