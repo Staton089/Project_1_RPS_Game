@@ -28,3 +28,38 @@
   padding: 5px;
   border-radius: 50%;
 }
+
+.enterName-Container{
+  display: flex;
+}
+
+.start-button {
+  background-color: #0C356A;
+  border: none;
+  color: rgb(255, 255, 255);
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.start-button:hover {
+  background-color: #279EFF;
+}
+
+@keyframes blink {
+  0%, 100% {
+    background-color: #0C356A;
+  }
+  50% {
+    background-color: #D5FFD0;
+  }
+}
+
+.start-button-blink {
+  animation: blink 1s infinite;
+}
