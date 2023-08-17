@@ -9,10 +9,10 @@ let blinking = false;
 
 // Function to toggle the blinking effect
 function toggleBlink() {
-  blinking = !blinking;
-  const color = blinking ? colors[1] : colors[0];
-  startButton.style.backgroundColor = color;
+  blinking = !blinking; // Toggle the blinking state
+  const color = blinking ? colors[1] : colors[0]; // Choose the color based on the blinking state
+  startButton.style.backgroundColor = color; // Apply the selected color to the button's background
 }
 
 // Start blinking when the page is loaded
-setInterval(toggleBlink, 1000);
+setInterval(toggleBlink, 1000); // Toggle the blinking effect every 1000 milliseconds (1 second)
