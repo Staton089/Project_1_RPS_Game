@@ -1,59 +1,38 @@
-<!-- Document type declaration -->
 <!DOCTYPE html>
-<!-- Opening HTML tag with lang attribute set to "en" for English -->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <!-- Meta information for responsive design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Title of the webpage -->
     <title>STATONs RPS GAME</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-     <!-- Main content section -->
     <div>
       <h1>WELCOME TO STATON's RPS GAME</h1>
       <h2>Click Start to Begin the Game</h2>
+      <!-- Start button to begin the game -->
+      <h3 id="startButton" class="start-button">START</h3>
     </div>
-    
-    <!-- Button to start the game -->
-    <h3 class="start-button">START GAME</h3>
-    
-    <div>
+
+    <div id="gameSection" style="display: none">
       <h3>Time:</h3>
-      <h3 id ="playerEl">Player Score:</h3>
+      <h3 id="playerEl">Player Score:</h3>
       <h3>CPU Score:</h3>
-      
-    </div>
-  
-    <!-- Container for the Rock, Paper, Scissors choices -->
-    <div>
-      
-      <!-- Unordered list for displaying choices -->
+
       <ul>
         <li id="rockEl">
-          <!-- Image of hand sign for rock with alt description -->
           <img src="./asset/rockImg.png" alt="Hand sign for rock" />
         </li>
         <li id="paperEl">
-          <!-- Image of hand sign for paper with alt description -->
           <img src="./asset/paperImg.png" alt="Hand sign for paper" />
         </li>
         <li id="scissorsEl">
-          <!-- Image of hand sign for scissors with alt description -->
           <img src="./asset/scissorsImg.png" alt="Hand sign for scissors" />
         </li>
       </ul>
-    
     </div>
-
-    <!-- Empty div element -->
-    <div></div>
-
-    <!-- Include external JavaScript file to handle the game logic -->
-    <script src="./js/index.js"></script>
     <script src="./js/game.js"></script>
+    <script src="./js/blink.js"></script>
   </body>
 </html>

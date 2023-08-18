@@ -5,49 +5,51 @@
   box-sizing: border-box;
 }
 
-/* Apply colors to each choice */
-#rockEl img {
-  width: 300px;
-  height: 300px;
-  background-color: #102c57; /* Set background color */
-  padding: 5px;
-  border-radius: 50%; /* Apply circular border */
-}
-
-#paperEl img {
-  width: 300px;
-  height: 300px;
-  background-color: #0071e1; /* Set background color */
-  padding: 5px;
-  border-radius: 50%; /* Apply circular border */
-}
-
+/* Apply common styles to each choice */
+#rockEl img,
+#paperEl img,
 #scissorsEl img {
   width: 300px;
   height: 300px;
-  background-color: #4682a9; /* Set background color */
   padding: 5px;
-  border-radius: 50%; /* Apply circular border */
+  border-radius: 50%;
 }
 
-.enterName-Container{
-  display: flex; /* Use flexbox for layout */
+/* Customize individual choice colors */
+#rockEl img {
+  background-color: #102c57;
 }
 
-.start-button {
-  background-color: #0C356A; /* Set button background color */
+#paperEl img {
+  background-color: #0071e1;
+}
+
+#scissorsEl img {
+  background-color: #4682a9;
+}
+
+.enterName-Container {
+  display: flex;
+}
+
+#startButton {
+  background-color: #0c356a;
   border: none;
-  color: rgb(255, 255, 255); /* Set text color */
+  color: #fff;
   display: inline-block;
-  padding: 10px 20px; /* Add padding around text */
+  padding: 10px 20px;
   text-align: center;
-  font-size: 16px; /* Set font size */
-  border-radius: 5px; /* Apply rounded corners */
-  cursor: pointer; /* Change cursor on hover */
-  transition: background-color 0.3s ease; /* Add transition effect to background color change */
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.start-button:hover {
-  background-color: #279EFF; /* Change background color on hover */
+#startButton:hover {
+  background-color: #279eff;
 }
 
+/* className CSS */
+.hide{
+  display: none;
+}

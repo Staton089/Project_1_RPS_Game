@@ -1,57 +1,64 @@
 // The Choices - an array containing rock, paper, and scissors options
 var rockPaperScissorsChoices = ["rock", "paper", "scissors"];
-
-// Variables for different choices
-var Rock = "rock"; // Variable for "rock" choice
-var Paper = "paper"; // Variable for "paper" choice
-var Scissors = "scissors"; // Variable for "scissors" choice
-
-// Buttons - getting elements by their IDs
-var rockEl = document.getElementById("rockEl"); // Get the element with ID "rockEl"
-var paperEl = document.getElementById("paperEl"); // Get the element with ID "paperEl"
-var scissorsEl = document.getElementById("scissorsEl"); // Get the element with ID "scissorsEl"
-var playerEl = document.getElementById("playerEl");
-var playerNameInput = document.getElementById("playerNameInput");
-
-
 //Player  ---
 // Declare a variable to store the choice
 var player;
 
-// Click Function for Buttons
-// Add a click event listener to rockEl
+// Buttons - getting elements by their IDs
+// Get elements by their IDs
+var startButton = document.getElementById("startButton");
+var gameSection = document.getElementById("gameSection");
+var rockEl = document.getElementById("rockEl");
+var paperEl = document.getElementById("paperEl");
+var scissorsEl = document.getElementById("scissorsEl");
+var playerEl = document.getElementById("playerEl");
+var h1Tags = document.getElementsByTagName("h1");
+var h1El = h1Tags[0];
+var h2Tags = document.getElementsByTagName("h2");
+var h2El = h2Tags[0];
+
+// Click event for the start button
+startButton.addEventListener("click", function () {
+  // When the "start" button is clicked, perform the following actions:
+
+  // Clear the text content of the <h1> element
+  h1El.textContent = "";
+
+  // Clear the text content of the <h2> element
+  h2El.textContent = "";
+
+  // Hide the "start" button by changing its display style to "none"
+  startButton.style.display = "none";
+});
+
+
+// Click events for rock, paper, and scissors buttons
 rockEl.addEventListener("click", function () {
-  // Set the playerChoice variable to "rock"
   player = "rock";
-  // Log the player's choice to the console
-  console.log(player);
-  // Call the game function after the player makes a choice
   rpsGame();
 });
-// Add a click event listener to rockEl
+
 paperEl.addEventListener("click", function () {
-  // Set the playerChoice variable to "rock"
   player = "paper";
-  // Log the player's choice to the console
-  console.log(player);
-  // Call the game function after the player makes a choice
   rpsGame();
 });
-// Add a click event listener to rockEl
+
 scissorsEl.addEventListener("click", function () {
-  // Set the playerChoice variable to "rock"
   player = "scissors";
-  // Log the player's choice to the console
-  console.log(player);
-  // Call the game function after the player makes a choice
   rpsGame();
 });
+
+
+
 
 // ROCK PAPER SCISSORS Game function
 function rpsGame() {
   //CPU ---
   // CPU's Random Choice - randomly selects an option from the rockPaperScissors array
-  var cpuRandomChoice = rockPaperScissorsChoices[Math.floor(Math.random() * rockPaperScissorsChoices.length)];
+  var cpuRandomChoice =
+    rockPaperScissorsChoices[
+      Math.floor(Math.random() * rockPaperScissorsChoices.length)
+    ];
   // Check for different outcomes and show alerts accordingly
   if (player === cpuRandomChoice) {
     alert("You Tie! Sorry"); // Alert when player's choice matches CPU's choice
