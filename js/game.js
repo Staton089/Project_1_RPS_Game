@@ -10,6 +10,9 @@ var Scissors = "scissors"; // Variable for "scissors" choice
 var rockEl = document.getElementById("rockEl"); // Get the element with ID "rockEl"
 var paperEl = document.getElementById("paperEl"); // Get the element with ID "paperEl"
 var scissorsEl = document.getElementById("scissorsEl"); // Get the element with ID "scissorsEl"
+var playerEl = document.getElementById("playerEl");
+var playerNameInput = document.getElementById("playerNameInput");
+
 
 //Player  ---
 // Declare a variable to store the choice
