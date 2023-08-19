@@ -17,6 +17,8 @@ var h1El = h1Tags[0];
 var h2Tags = document.getElementsByTagName("h2");
 var h2El = h2Tags[0];
 var divTags = document.getElementsByTagName("div");
+var playerScoreEl = document.getElementsByTagName("playerSocre");
+var cpuScoreEl = document.getElementsByTagName("cpuSocre");
 
 // Click event for the start button
 startButton.addEventListener("click", function () {
@@ -74,6 +76,8 @@ scissorsEl.addEventListener("click", function () {
 function rpsGame() {
   //CPU ---
   // CPU's Random Choice - randomly selects an option from the rockPaperScissors array
+  var playerScore = 0;
+  var cpuScore = 0;
   var cpuRandomChoice =
     rockPaperScissorsChoices[
       Math.floor(Math.random() * rockPaperScissorsChoices.length)
