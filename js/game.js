@@ -33,6 +33,17 @@ startButton.addEventListener("click", function () {
 
   // Remove the "hide" class from the second div element
   divTags[1].classList.remove("hide");
+
+  //timer
+  var timeEl = document.getElementById("time");
+  var time = 0;
+  function updateTimer(){
+    timeEl.textContent = `Timer: ${time}`; // Update the timeEl with the new time
+    time++;
+  }
+  const timerInterval = setInterval(updateTimer, 1000);
+
+
 });
 
 
