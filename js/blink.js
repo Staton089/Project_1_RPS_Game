@@ -4,7 +4,7 @@ var playerNameInput = document.getElementById("playerNameInput"); // Gets an inp
 var playerEl = document.getElementById("playerEl"); // Gets an element with ID "playerEl"
 
 // Define the colors for the blinking effect
-const colors = ['#0C356A', '#40F8FF']; // Two colors: dark blue and light blue
+const colors = ['#17176e', '#bf17a0']; // Two colors: dark blue and light blue
 const fontColors = ['white', 'black']; // Two font colors: white and black
 
 // Set up a variable to track the blinking state

@@ -3,40 +3,39 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 35px;
 }
 
-/* Apply common styles to each choice */
-#rockEl img,
-#paperEl img,
-#scissorsEl img {
-  width: 300px;
-  height: 300px;
-  padding: 5px;
-  border-radius: 50%;
+/* Set default background and text color */
+body {
+  background-color: #ffffff;
+  color: #03080D;
 }
 
-/* Customize individual choice colors */
-#rockEl img {
-  background-color: #102c57;
+/* Define color variables */
+:root {
+  --primary-color: #00b2ff;
+  --secondary-color: #f987ff;
+  --accent-color: #ffcc00;
+  --bg-color:#ffffff;
 }
-
-#paperEl img {
-  background-color: #0071e1;
+.vsBg{
+  background-color: #03080D;
+  color: #ffffff
 }
-
-#scissorsEl img {
-  background-color: #4682a9;
-}
-
-.enterName-Container {
+/* Front Page Style */
+.startBtnContainer {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
 #startButton {
-  background-color: #0c356a;
+  background-color: #17176e;
   border: none;
   color: #fff;
-  display: inline-block;
   padding: 10px 20px;
   text-align: center;
   font-size: 16px;
@@ -49,7 +48,34 @@
   background-color: #279eff;
 }
 
-/* className CSS */
-.hide{
-  display: none;
+/* Game Style */
+.vsContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
 }
+
+.vsImg {
+  width: 200px;
+  height: 200px;
+}
+
+.back {
+  background-color: var(--bg-color)
+}
+
+.rpsContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+}
+.rpsContainer li img{
+  width: 600px;
+}
+.rpsContainer li {
+  padding: 10px;
+}
+
+/* Game Style End */
