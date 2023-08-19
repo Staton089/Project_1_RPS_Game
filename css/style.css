@@ -31,17 +31,22 @@ body {
   justify-content: center;
   height: 100vh;
 }
+.startBtnContainer{
+  padding: 25px;
+}
+  
+
 
 #startButton {
-  background-color: #17176e;
   border: none;
   color: #fff;
-  padding: 10px 20px;
+  padding: 20px 30px;
   text-align: center;
   font-size: 16px;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  
 }
 
 #startButton:hover {
@@ -74,8 +79,16 @@ body {
 .rpsContainer li img{
   width: 600px;
 }
+.rpsContainer li img:hover{
+  background-color: #dadcdd;
+  cursor: pointer;
+  border-radius: 50%;
+}
 .rpsContainer li {
   padding: 10px;
+  list-style:none;
 }
-
+.hide{
+  display: none;
+}
 /* Game Style End */
