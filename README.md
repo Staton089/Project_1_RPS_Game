@@ -5,7 +5,7 @@ Welcome to STATON's Rock-Paper-Scissors (RPS) Game! This web-based game lets you
 ## How to Play
 
 1. Click the **Start** button to begin the game.
-2. Once the game starts, you'll see the "Player" and "CPU" options.
+2. Once the game starts, you'll see the "Player" options.
 3. Click on your choice: Rock, Paper, or Scissors.
 4. The game will determine the winner based on the choices made.
 5. The winner will be alerted, and scores will be updated.
