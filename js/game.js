@@ -16,6 +16,7 @@ var h1Tags = document.getElementsByTagName("h1");
 var h1El = h1Tags[0];
 var h2Tags = document.getElementsByTagName("h2");
 var h2El = h2Tags[0];
+var divTags = document.getElementsByTagName("div");
 
 // Click event for the start button
 startButton.addEventListener("click", function () {
@@ -29,7 +30,11 @@ startButton.addEventListener("click", function () {
 
   // Hide the "start" button by changing its display style to "none"
   startButton.style.display = "none";
+
+  // Remove the "hide" class from the second div element
+  divTags[1].classList.remove("hide");
 });
+
 
 
 // Click events for rock, paper, and scissors buttons
