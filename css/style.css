@@ -92,3 +92,103 @@ body {
   display: none;
 }
 /* Game Style End */
+
+/* Default styles (for larger screens) */
+
+/* ... Your existing CSS code ... */
+
+/* Media query for smaller screens (e.g., phones) */
+@media (max-width: 480px) {
+  body {
+    font-size: 16px;
+  }
+
+  .startBtnContainer {
+    padding: 5px;
+  }
+
+  .vsContainer {
+    margin-top: 5px;
+  }
+
+  .vsBg {
+    padding: 10px;
+  }
+
+  .rpsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .rpsContainer li img {
+    width: 80px;
+    height: 80px;
+    margin: 5px;
+  }
+
+  .vsImg {
+    width: 50px;
+    height: 50px;
+  }
+
+  .vsContainer h3 {
+    margin: 5px 0;
+  }
+
+  .vsContainer h3,
+  .vsContainer h2 {
+    font-size: 14px;
+  }
+}
+
+/* Media query for larger screens (e.g., tablets and small laptops) */
+@media (max-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+
+  .startBtnContainer {
+    padding: 10px;
+  }
+
+  .vsContainer {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .vsBg {
+    padding: 20px;
+  }
+
+  .rpsContainer {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .rpsContainer li img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    margin: 5px;
+  }
+
+  .vsImg {
+    width: 60px;
+    height: 60px;
+  }
+
+  .vsContainer h3 {
+    margin: 10px 0;
+  }
+
+  .vsContainer h3,
+  .vsContainer h2 {
+    font-size: 16px;
+  }
+}
