@@ -17,8 +17,12 @@ var h1El = h1Tags[0];
 var h2Tags = document.getElementsByTagName("h2");
 var h2El = h2Tags[0];
 var divTags = document.getElementsByTagName("div");
-var playerScoreEl = document.getElementsByTagName("playerSocre");
-var cpuScoreEl = document.getElementsByTagName("cpuSocre");
+var playerScoreEl = document.getElementById("playerScore"); // Corrected ID
+var cpuScoreEl = document.getElementById("cpuScore"); // Corrected ID
+var resetButton = document.getElementById("resetButton");
+// Initialize player and CPU scores from local storage or default to 0
+var playerScore = parseInt(localStorage.getItem("playerScore")) || 0;
+var cpuScore = parseInt(localStorage.getItem("cpuScore")) || 0;
 
 // Click event for the start button
 startButton.addEventListener("click", function () {
@@ -33,10 +37,15 @@ startButton.addEventListener("click", function () {
   // Hide the "start" button by changing its display style to "none"
   startButton.style.display = "none";
 
+  // Enable the choice buttons
+  rockEl.disabled = false;
+  paperEl.disabled = false;
+  scissorsEl.disabled = false;
+
   // Remove the "hide" class from the second div element
   divTags[1].classList.remove("hide");
   divTags[0].classList.remove("startBtnContainer");
-  
+
   // Timer functionality
   var timeEl = document.getElementById("time");
   var time = 0;
@@ -48,10 +57,11 @@ startButton.addEventListener("click", function () {
   }
 
   // Set up a timer interval to call the updateTimer function every second (1000ms)
-  const timerInterval = setInterval(updateTimer, 1000);
+  const timerInterval = setInterval(updateTimer, 1000)
+
+  // Update the score displays
+  updateScoreDisplays();
 });
-
-
 
 // Click events for rock, paper, and scissors buttons
 rockEl.addEventListener("click", function () {
@@ -69,15 +79,10 @@ scissorsEl.addEventListener("click", function () {
   rpsGame();
 });
 
-
-
-
 // ROCK PAPER SCISSORS Game function
 function rpsGame() {
   //CPU ---
   // CPU's Random Choice - randomly selects an option from the rockPaperScissors array
-  var playerScore = 0;
-  var cpuScore = 0;
   var cpuRandomChoice =
     rockPaperScissorsChoices[
       Math.floor(Math.random() * rockPaperScissorsChoices.length)
@@ -87,15 +92,45 @@ function rpsGame() {
     alert("You Tie! Sorry"); // Alert when player's choice matches CPU's choice
   } else if (player === "rock" && cpuRandomChoice === "scissors") {
     alert("You Won! Nice"); // Alert when player's rock beats CPU's scissors
+    playerScore++;
   } else if (player === "paper" && cpuRandomChoice === "rock") {
     alert("You Won! Great Job"); // Alert when player's paper beats CPU's rock
+    playerScore++;
   } else if (player === "scissors" && cpuRandomChoice === "paper") {
     alert("You Won! Great"); // Alert when player's scissors beats CPU's paper
+    playerScore++;
   } else if (cpuRandomChoice === "rock" && player === "scissors") {
     alert("You lose! That sucks"); // Alert when CPU's rock beats player's scissors
+    cpuScore++;
   } else if (cpuRandomChoice === "paper" && player === "rock") {
     alert("You lose! Damn Try again"); // Alert when CPU's paper beats player's rock
+    cpuScore++;
   } else if (cpuRandomChoice === "scissors" && player === "paper") {
     alert("You lose! Better luck next time"); // Alert when CPU's scissors beats player's paper
+    cpuScore++;
   }
+  // Update the score displays
+  updateScoreDisplays();
+   
+  // Save scores to local storage
+  localStorage.setItem("playerScore", playerScore);
+  localStorage.setItem("cpuScore", cpuScore);
 }
+
+// Function to update the score displays
+function updateScoreDisplays() {
+  playerScoreEl.textContent = `Player Score: ${playerScore}`;
+  cpuScoreEl.textContent = `CPU Score: ${cpuScore}`;
+}
+resetButton.addEventListener("click", function () {
+  // Reset player and CPU scores to zero
+  playerScore = 0;
+  cpuScore = 0;
+
+  // Update the score displays
+  updateScoreDisplays();
+
+  // Clear local storage for scores
+  localStorage.removeItem("playerScore");
+  localStorage.removeItem("cpuScore");
+});

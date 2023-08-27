@@ -10,6 +10,18 @@
 body {
   background-color: #ffffff;
   color: #03080D;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-size: 18px; /* Adjust font size as needed */
+}
+
+footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Define color variables */
@@ -17,12 +29,9 @@ body {
   --primary-color: #00b2ff;
   --secondary-color: #f987ff;
   --accent-color: #ffcc00;
-  --bg-color:#ffffff;
+  --bg-color: #ffffff;
 }
-.vsBg{
-  background-color: #03080D;
-  color: #ffffff
-}
+
 /* Front Page Style */
 .startBtnContainer {
   display: flex;
@@ -30,35 +39,45 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  color: #03080D; /* White font color */
 }
-.startBtnContainer{
-  padding: 25px;
-}
-  
 
+.game-title {
+  font-size: 48px; /* Adjust font size as needed */
+  margin-bottom: 10px;
+}
+
+.game-instructions {
+  font-size: 24px; /* Adjust font size as needed */
+  margin-bottom: 20px;
+}
 
 #startButton {
   border: none;
   color: #fff;
-  padding: 20px 30px;
+  padding: 15px 30px;
   text-align: center;
-  font-size: 16px;
+  font-size: 20px; /* Adjust font size as needed */
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add box shadow */
 }
 
 #startButton:hover {
-  background-color: #279eff;
+  background-color: #ffffff;
 }
-
 /* Game Style */
 .vsContainer {
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin-top: 20px;
+}
+.vsBg {
+  background-color:#03080D; /* Black background color */
+  color: #ffffff; /* White font color */
+  padding: 20px; /* Adding some padding for spacing */
 }
 
 .vsImg {
@@ -67,7 +86,7 @@ body {
 }
 
 .back {
-  background-color: var(--bg-color)
+  background-color: var(--bg-color);
 }
 
 .rpsContainer {
@@ -76,21 +95,26 @@ body {
   align-items: center;
   margin-top: 20px;
 }
-.rpsContainer li img{
+
+.rpsContainer li img {
   width: 600px;
 }
-.rpsContainer li img:hover{
+
+.rpsContainer li img:hover {
   background-color: #dadcdd;
   cursor: pointer;
   border-radius: 50%;
 }
+
 .rpsContainer li {
   padding: 10px;
-  list-style:none;
+  list-style: none;
 }
-.hide{
+
+.hide {
   display: none;
 }
+
 /* Game Style End */
 
 /* Default styles (for larger screens) */
@@ -143,6 +167,31 @@ body {
     font-size: 14px;
   }
 }
+
+/* Your existing styles */
+
+/* Media query for smaller screens (e.g., phones) */
+@media (max-width: 480px) {
+  .game-title {
+    font-size: 24px;
+  }
+
+  .game-instructions {
+    font-size: 16px;
+  }
+}
+
+/* Media query for larger screens (e.g., tablets and small laptops) */
+@media (max-width: 768px) {
+  .game-title {
+    font-size: 36px;
+  }
+
+  .game-instructions {
+    font-size: 20px;
+  }
+}
+
 
 /* Media query for larger screens (e.g., tablets and small laptops) */
 @media (max-width: 768px) {
