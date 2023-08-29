@@ -30,6 +30,7 @@ footer{
   --secondary-color: #f987ff;
   --accent-color: #ffcc00;
   --bg-color: #ffffff;
+  --bg2-color: #03080D;
 }
 
 /* Front Page Style */
@@ -67,17 +68,53 @@ footer{
 #startButton:hover {
   background-color: #ffffff;
 }
+
+
 /* Game Style */
+
+.timeNewGame{
+  display: flex;
+  justify-content: space-between;
+
+}
+/* Define color variables */
+:root {
+  --primary-color: #00b2ff;
+  --bg-color: #ffffff;
+}
+
+/* Style the reset button */
+.reset-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--bg2-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.2s;
+  border: 2px solid var(--bg-color); /* Add white border */
+  border-radius: 5px;
+}
+
+.reset-button:hover {
+  background-color: var(--bg-color);
+  color: var(--bg2-color);
+  transform: scale(1.05);
+}
+
+.vsBg {
+  background-color:#03080D; /* Black background color */
+  color: #ffffff; /* White font color */
+  padding: 20px; /* Adding some padding for spacing */
+}
+
 .vsContainer {
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin-top: 20px;
-}
-.vsBg {
-  background-color:#03080D; /* Black background color */
-  color: #ffffff; /* White font color */
-  padding: 20px; /* Adding some padding for spacing */
 }
 
 .vsImg {

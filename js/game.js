@@ -1,25 +1,25 @@
 // The Choices - an array containing rock, paper, and scissors options
 var rockPaperScissorsChoices = ["rock", "paper", "scissors"];
-//Player  ---
-// Declare a variable to store the choice
+
+// Player choice
 var player;
 
-// Buttons - getting elements by their IDs
 // Get elements by their IDs
 var startButton = document.getElementById("startButton");
-var gameSection = document.getElementById("gameSection");
 var rockEl = document.getElementById("rockEl");
 var paperEl = document.getElementById("paperEl");
 var scissorsEl = document.getElementById("scissorsEl");
-var playerEl = document.getElementById("playerEl");
+var playerScoreEl = document.getElementById("playerScore"); // Corrected ID
+var cpuScoreEl = document.getElementById("cpuScore"); // Corrected ID
+var resetButton = document.getElementById("resetButton");
+
+// Get other elements by their tags
 var h1Tags = document.getElementsByTagName("h1");
 var h1El = h1Tags[0];
 var h2Tags = document.getElementsByTagName("h2");
 var h2El = h2Tags[0];
 var divTags = document.getElementsByTagName("div");
-var playerScoreEl = document.getElementById("playerScore"); // Corrected ID
-var cpuScoreEl = document.getElementById("cpuScore"); // Corrected ID
-var resetButton = document.getElementById("resetButton");
+
 // Initialize player and CPU scores from local storage or default to 0
 var playerScore = parseInt(localStorage.getItem("playerScore")) || 0;
 var cpuScore = parseInt(localStorage.getItem("cpuScore")) || 0;
@@ -46,19 +46,6 @@ startButton.addEventListener("click", function () {
   divTags[1].classList.remove("hide");
   divTags[0].classList.remove("startBtnContainer");
 
-  // Timer functionality
-  var timeEl = document.getElementById("time");
-  var time = 0;
-
-  // Function to update the timer
-  function updateTimer() {
-    timeEl.textContent = `Timer: ${time}`; // Update the timeEl with the new time
-    time++;
-  }
-
-  // Set up a timer interval to call the updateTimer function every second (1000ms)
-  const timerInterval = setInterval(updateTimer, 1000)
-
   // Update the score displays
   updateScoreDisplays();
 });
@@ -81,7 +68,6 @@ scissorsEl.addEventListener("click", function () {
 
 // ROCK PAPER SCISSORS Game function
 function rpsGame() {
-  //CPU ---
   // CPU's Random Choice - randomly selects an option from the rockPaperScissors array
   var cpuRandomChoice =
     rockPaperScissorsChoices[
@@ -122,11 +108,13 @@ function updateScoreDisplays() {
   playerScoreEl.textContent = `Player Score: ${playerScore}`;
   cpuScoreEl.textContent = `CPU Score: ${cpuScore}`;
 }
+
+// Reset button click event
 resetButton.addEventListener("click", function () {
   // Reset player and CPU scores to zero
   playerScore = 0;
   cpuScore = 0;
-
+  
   // Update the score displays
   updateScoreDisplays();
 

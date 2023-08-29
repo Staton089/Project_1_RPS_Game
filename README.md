@@ -1,24 +1,24 @@
 # Rock-Paper-Scissors Game
 
-Welcome to STATON's Rock-Paper-Scissors (RPS) Game! This web-based game lets you challenge the computer in the classic game of Rock-Paper-Scissors.
+Welcome to STATON's Rock-Paper-Scissors (RPS) Game! This web-based game allows you to challenge the computer to the classic Rock-Paper-Scissors game.
 
 ## How to Play
 
-1. Click the **Start** button to begin the game.
-2. Once the game starts, you'll see the "Player" options.
+1. Click the **Start** button to initiate the game.
+2. Once the game starts, you'll be presented with the "Player" options.
 3. Click on your choice: Rock, Paper, or Scissors.
 4. The game will determine the winner based on the choices made.
-5. The winner will be alerted, and scores will be updated.
+5. The winner will be announced, and the scores will be updated accordingly.
 
 ## Technologies Used
 
-- HTML: For structuring the webpage
-- CSS: For styling the game interface
-- JavaScript: For game logic and interactivity
+- HTML: Used for structuring the webpage.
+- CSS: Utilized for styling the game interface.
+- JavaScript: Implemented for the game's logic and interactivity.
 
 ## Getting Started
 
-1. Clone the repository to your local machine.
+1. Clone this repository to your local machine.
 2. Open the `index.html` file in a web browser.
 3. Play the game by clicking on your choice and see the outcome!
 
