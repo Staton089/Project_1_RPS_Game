@@ -18,7 +18,7 @@ body {
   font-size: 18px; /* Adjust font size as needed */
 }
 
-footer{
+footer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -32,6 +32,18 @@ footer{
   --bg-color: #ffffff;
   --bg2-color: #03080D;
 }
+
+/* font */
+.game-title,
+.game-instructions,
+#startButton,
+.vsContainer h2,
+.vsContainer h3,
+.reset-button,
+.rpsContainer li img {
+  font-family: 'Press Start 2P', cursive;
+}
+
 
 /* Front Page Style */
 .startBtnContainer {
@@ -69,21 +81,13 @@ footer{
   background-color: #ffffff;
 }
 
-
 /* Game Style */
 
-.timeNewGame{
+.timeNewGame {
   display: flex;
   justify-content: space-between;
-
-}
-/* Define color variables */
-:root {
-  --primary-color: #00b2ff;
-  --bg-color: #ffffff;
 }
 
-/* Style the reset button */
 .reset-button {
   display: inline-block;
   padding: 10px 20px;
@@ -94,7 +98,7 @@ footer{
   cursor: pointer;
   font-size: 16px;
   transition: background-color 0.3s, transform 0.2s;
-  border: 2px solid var(--bg-color); /* Add white border */
+  border: 2px solid var(--bg-color);
   border-radius: 5px;
 }
 
@@ -105,9 +109,9 @@ footer{
 }
 
 .vsBg {
-  background-color:#03080D; /* Black background color */
-  color: #ffffff; /* White font color */
-  padding: 20px; /* Adding some padding for spacing */
+  background-color: #03080D;
+  color: #ffffff;
+  padding: 20px;
 }
 
 .vsContainer {
@@ -152,10 +156,7 @@ footer{
   display: none;
 }
 
-/* Game Style End */
-
 /* Default styles (for larger screens) */
-
 /* ... Your existing CSS code ... */
 
 /* Media query for smaller screens (e.g., phones) */
@@ -205,19 +206,6 @@ footer{
   }
 }
 
-/* Your existing styles */
-
-/* Media query for smaller screens (e.g., phones) */
-@media (max-width: 480px) {
-  .game-title {
-    font-size: 24px;
-  }
-
-  .game-instructions {
-    font-size: 16px;
-  }
-}
-
 /* Media query for larger screens (e.g., tablets and small laptops) */
 @media (max-width: 768px) {
   .game-title {
@@ -227,11 +215,7 @@ footer{
   .game-instructions {
     font-size: 20px;
   }
-}
 
-
-/* Media query for larger screens (e.g., tablets and small laptops) */
-@media (max-width: 768px) {
   body {
     font-size: 18px;
   }
@@ -277,4 +261,6 @@ footer{
   .vsContainer h2 {
     font-size: 16px;
   }
+
+  /* Additional media query styles... */
 }
